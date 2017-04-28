@@ -24,7 +24,21 @@ public class ClientFrame extends classClientFrame {
 		sendForm(btn[0], txtfield[0], txtfield[1], chckbx[0], chckbx[1], rdbtn[0], rdbtn[1], rdbtn[2]);
 		
 		getTourCost(btn[2], txtfield[2]);
-		
+		btn[1].addActionListener(new ActionListener () { 
+
+			public void actionPerformed(ActionEvent e) { 
+
+			dispose(); 
+
+			ModeFrame MD = new ModeFrame(); 
+
+			MD.setVisible(true); 
+
+			MD.setSize(400, 310); 
+
+			MD.setLocationRelativeTo(null); 
+			} 
+			});
 		}
 	
 	public static void main(String[] args) {		
