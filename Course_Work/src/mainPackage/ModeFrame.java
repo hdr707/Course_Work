@@ -21,7 +21,7 @@ public class ModeFrame extends classModeFrame {
 		getContentPane().add(panel);	
 		setLabel("lblselectmode", "Выберите режим", 135, 0, 120, 30, 14, panel);		
 		setJButton(textBtn, btncoordxy, btnscale, btnsizefont, panel);
-		
+		gotoClientFrame(button[1], CF);
 	}
 
 	public static void main(String[] args) {
@@ -36,7 +36,16 @@ public class ModeFrame extends classModeFrame {
 					e.printStackTrace();
 				}
 			}
-		});
+		});		
 	}
-	
+	public void gotoClientFrame (JButton button, ClientFrame frame){ 
+		button.addActionListener(new ActionListener() { 
+		public void actionPerformed(ActionEvent e) { 
+		dispose(); 
+		frame.setVisible(true); 
+		frame.setSize(420, 380); 
+		frame.setLocationRelativeTo(null); 
+		} 
+		}); 
+		}
 }
