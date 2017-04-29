@@ -21,6 +21,16 @@ public class AdminFrame extends classAdminFrame {
 		
 		sendTourCost(button[0], label[2], answer2, textField[2], textField[3], textField[0], textField[1]);
 		
+		button[1].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			dispose();
+			ModeFrame MD = new ModeFrame();
+			MD.setVisible(true);
+			MD.setSize(400, 310);
+			MD.setLocationRelativeTo(null);
+			}
+			});
+		
 	}
 	
 	public static void main(String[] args) {

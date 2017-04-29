@@ -22,6 +22,7 @@ public class ModeFrame extends classModeFrame {
 		setLabel("lblselectmode", "Выберите режим", 135, 0, 120, 30, 14, panel);		
 		setJButton(textBtn, btncoordxy, btnscale, btnsizefont, panel);
 		gotoClientFrame(button[1], CF);
+		gotoAdminFrame(button[0],AF);
 	}
 
 	public static void main(String[] args) {
@@ -47,5 +48,17 @@ public class ModeFrame extends classModeFrame {
 		frame.setLocationRelativeTo(null); 
 		} 
 		}); 
+		}
+	
+	public void gotoAdminFrame (JButton button, AdminFrame frame){
+		button.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		AF.setAnswer1("Да!");
+		dispose();
+		frame.setVisible(true);
+		frame.setSize(445, 310);
+		frame.setLocationRelativeTo(null);
+		}
+		});
 		}
 }
